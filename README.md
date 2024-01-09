@@ -1,4 +1,4 @@
-# Wedding-Invitation-Card-Maker
+# Wedding Invitation Card Maker Android App
  Card Creator - Invite - Shaadi - Engagement
 
  Wedding Invitation Card Maker is a utility application that can be used to get beautiful Indian Wedding cards on your mobile phone and inviting your guests instantly.
