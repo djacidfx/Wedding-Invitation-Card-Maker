@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:editTextStyle">@style/MyEditTextStyle</item>
+        <item name="android:textViewStyle">@style/MyTextViewStyle</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="@style/AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="MyEditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/fontregular</item>
+    </style>
+    <style name="MyTextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/fontregular</item>
+    </style>
+    <style name="CustomNavigationViewStyle" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:listPreferredItemHeightSmall">40dp</item>
+    </style>
+</resources>

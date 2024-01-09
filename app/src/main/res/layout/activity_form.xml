@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/pinkbar"
+        android:weightSum="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.4"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/banner1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/boysSide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:fontFamily="@font/fontregular"
+                        android:text=" Boys Side"
+                        android:textColor="#1f1f1f"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/girlsSide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:checked="true"
+                        android:fontFamily="@font/fontregular"
+                        android:text=" Girls Side "
+                        android:textColor="#1f1f1f"
+                        android:textSize="18sp" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layouttop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutbride"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/bridedetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/fontbold"
+                            android:padding="@dimen/_4sdp"
+                            android:text="Bride Details(Girl&apos;s Side)"
+                            android:textColor="#1f1f1f"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvfnm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="FirstName : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/firstNameG"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="First Name "
+                                android:singleLine="true"
+                                android:text="Ishita" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvlnm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="LastName : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/lastNameG"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Last Name "
+                                android:singleLine="true"
+                                android:text="Agrawal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvfathernm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="FatherName : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/fatherNAmeG"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Father NAme "
+                                android:singleLine="true"
+                                android:text="Shubham" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="MotherName : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/motherNameG"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Moter Name"
+                                android:singleLine="true"
+                                android:text="Monika" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="GrandFather Name : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/grandFathernameG"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Grand Father Name(Optional) "
+                                android:singleLine="true"
+                                android:text="Shubam" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="GrandMother Name : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/grandMothernameG"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Grand Mother Name(Optional)"
+                                android:singleLine="true"
+                                android:text="Monika" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutgroom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/groomdetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/fontbold"
+                            android:padding="@dimen/_4sdp"
+                            android:text="Groom Details(Boy&apos;s Side)"
+                            android:textColor="#1f1f1f"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="FirstName : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/firstnameB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="First Name"
+                                android:singleLine="true"
+                                android:text="Mohit" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="LastName : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/lastNameB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Last Name"
+                                android:singleLine="true"
+                                android:text="Agrawal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="FatherName : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/fatherNameB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Father Name "
+                                android:singleLine="true"
+                                android:text="subham" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="MotherName : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/motherNameB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Mother Name "
+                                android:singleLine="true"
+                                android:text="Monika" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="GrandFather Name : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/grandFatherNameB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Grand Father Name(Optional) "
+                                android:singleLine="true"
+                                android:text="Shubham" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="GrandMother Name : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/grandMothernameB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Grand Mother Name(Optional) "
+                                android:singleLine="true"
+                                android:text="Monika" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearfunctions"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/functiondetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/fontbold"
+                        android:padding="@dimen/_4sdp"
+                        android:text="Function Detail"
+                        android:textColor="#1f1f1f"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/lenearfun1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Name : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/Functionname1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Function name"
+                                android:singleLine="true"
+                                android:text="Chak Bhat" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Date : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/date1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:editable="false"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Function Date"
+                                android:singleLine="true"
+                                android:text="25-12-2019" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Time : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/time1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:editable="false"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Function Time"
+                                android:singleLine="true"
+                                android:text="11:5 AM" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Venue : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/venue1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="venue"
+                                android:singleLine="true"
+                                android:text="The Tripti Horel, Vijay Nager, Indor" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/addmorefunction1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:text="ADD MORE FUNCTION"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="@dimen/_20sdp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lenearfun2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/closebtn1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:src="@drawable/ic_close_24dp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Name : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/Functionname2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Function name "
+                                android:singleLine="true"
+                                android:text="Ladies Sangeet" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Date : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/date2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:editable="false"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Function Date"
+                                android:singleLine="true"
+                                android:text="25-12-2019" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Time : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/time2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:editable="false"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Function Time"
+                                android:singleLine="true"
+                                android:text="11:5 AM" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Venue : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/venue2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="venue"
+                                android:singleLine="true"
+                                android:text="The Tripti Horel, Vijay Nager, Indor" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/addmorefunction2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="center_horizontal"
+                            android:text="ADD MORE FUNCTION"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="@dimen/_20sdp"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lenearfun3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/closebtn2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:src="@drawable/ic_close_24dp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Name : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/Functionname3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Function name"
+                                android:singleLine="true"
+                                android:text="Reception" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Date : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/date3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:editable="false"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Function Date"
+                                android:singleLine="true"
+                                android:text="25-12-2019" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Time : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/time3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:editable="false"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Function Time"
+                                android:singleLine="true"
+                                android:text="11:5 AM" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Function Venue : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/venue3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="venue"
+                                android:singleLine="true"
+                                android:text="The Tripti Horel, Vijay Nager, Indor" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/otherdetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/fontbold"
+                            android:padding="@dimen/_4sdp"
+                            android:text="Other Details"
+                            android:textColor="#1f1f1f"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Rsvp : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/Rsvp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Rsvp(Optional) "
+                                android:singleLine="true"
+                                android:text="Agrawal&apos;s Family" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Date : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/date_other"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:editable="false"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Save The Date"
+                                android:singleLine="true"
+                                android:text="25-12-2019" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:text="Venue : "
+                                android:textSize="@dimen/_14sdp" />
+
+                            <EditText
+                                android:id="@+id/venue_other"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/fontregular"
+                                android:hint="Venue "
+                                android:singleLine="true"
+                                android:text="The Tripti Horel, Vijay Nager, Indor" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/preview"
+                    android:layout_width="@dimen/_142sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_4sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

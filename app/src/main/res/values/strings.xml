@@ -1,0 +1,45 @@
+<resources>
+
+
+    <string name="app_name">Wedding Card</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="check_rate">check_rate</string>
+    <string name="chip_text">Chip text</string>
+    <string name="close">close</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="nav_app_bar_navigate_up_description">Navigate up</string>
+    <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="next">NEXT</string>
+    <string name="open">open</string>
+    <string name="password_toggle_content_description">Show password</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="privacypolicy">file:///android_asset/privacy_policy.html</string>
+    <string name="rate_dialog_cancel">Remind Me Later</string>
+    <string name="rate_dialog_message">If you enjoy playing this app, would you mind taking a moment to rate it? It won\'t take more than a minute. Thanks for your support!</string>
+    <string name="rate_dialog_no">No, Thanks</string>
+    <string name="rate_dialog_ok">Rate It Now</string>
+    <string name="rate_dialog_title">Rate this app</string>
+    <string name="rating_dialog_cancel">Cancel</string>
+    <string name="rating_dialog_experience">How was your experience with us?</string>
+    <string name="rating_dialog_feedback_title">Feedback</string>
+    <string name="rating_dialog_maybe_later">Maybe later</string>
+    <string name="rating_dialog_never">Never</string>
+    <string name="rating_dialog_submit">Submit</string>
+    <string name="rating_dialog_suggestions">Suggest us what went wrong and we\'ll work on it!</string>
+    <string name="search_menu_title">Search</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_welcome">Home Screen</string>
+</resources>
